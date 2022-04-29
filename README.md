@@ -8,9 +8,12 @@ Django==4.0.4
 
 --------------------------------------------------------------------
 
-Database user in sqlite3 \n
-Some Test cases is added \n
-Login username : admin \n
-Login Password : 123 \n
+Database user in sqlite3 
+
+Some Test cases is added 
+
+Login username : admin 
+
+Login Password : 123 
 
 --------------------------------------------------------------------
