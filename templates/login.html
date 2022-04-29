@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Login Page</title>
+      <style>
+         
+      </style>
+
+      <link rel="stylesheet" href="{% static 'css/login.css' %}">
+   </head>
+   <body>
+      <!-- Begin Page Content -->
+      <div id="container">
+         <form action="/login" method="post" autocomplete="off">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required autocomplete="off">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required autocomplete="off">
+            {% if error %}
+               <p style="margin-left: 20px;font-size: 12px;color: red;">{{error}}</p>
+            {% endif %}
+               <div id="lower">
+               <!-- <input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label> -->
+               <input type="submit" value="Login">
+            </div>
+            <!--/ lower-->
+         </form>
+      </div>
+      <!--/ container-->
+      <!-- End Page Content -->
+   </body>
+</html>
